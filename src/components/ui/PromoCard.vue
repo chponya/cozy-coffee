@@ -4,6 +4,7 @@ defineProps<{
   description: string
   buttonText: string
   image: string
+  to: string
 }>()
 </script>
 
@@ -20,11 +21,12 @@ defineProps<{
         {{ description }}
       </p>
 
-      <button
-        class="px-4 py-2 rounded-full w-36 bg-[#E0EBEC] drop-shadow-sm hover:bg-[#F5E5CF] transition"
+      <RouterLink
+        :to="to"
+        class="flex w-36 items-center justify-center px-4 py-2 rounded-full bg-[#E0EBEC] drop-shadow-sm hover:bg-[#F5E5CF] transition"
       >
          {{ buttonText }}
-      </button>
+      </RouterLink>
     </div>
 
     <div class="relative w-40 h-40">

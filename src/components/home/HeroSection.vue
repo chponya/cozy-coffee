@@ -28,7 +28,8 @@ import PromoCard from '../ui/PromoCard.vue'
             <br>рядом с тобой
           </p>
 
-          <button
+          <RouterLink
+            to="/menu"  
             class="
               bg-[#679FA5]
               text-white
@@ -44,7 +45,7 @@ import PromoCard from '../ui/PromoCard.vue'
             "
           >
           Смотреть меню
-          </button>
+          </RouterLink>
         </div>
       </div>
 
@@ -53,24 +54,26 @@ import PromoCard from '../ui/PromoCard.vue'
         <PromoCard
           title="Акция недели"
           description="-20% на карамельный раф"
-          image="\images\promos\today.png"
+          image="/images/promos/today.png"
           button-text="Подробнее"
+          to="/promotions"
         />
 
         <PromoCard
           title="Комбо дня"
           description="Латте + хот-дог со скидкой 15%"
-          image="\images\promos\combo.png"
+          image="/images/promos/combo.png"
           button-text="Выбрать"
+          to="/promotions"
         />
 
         <PromoCard
           title="Сезонное меню"
           description="Клубничная матча и другие новинки"
-          image="\images\promos\summer.png"
+          image="/images/promos/summer.png"
           button-text="Попробовать"
-          />
-
+          to="/menu"
+        />
       </div>
 
     </div>
