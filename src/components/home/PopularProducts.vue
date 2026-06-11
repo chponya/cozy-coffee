@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import ProductCard from '../ui/ProductCard.vue'
-import ServiceCard from '../ui/ServiceCard.vue'
 import { products } from '../../data/products';
 </script>
 
 <template>
-  <section class="px-8 py-12">
+  <section class="px-10 pt-4">
 
     <div
       class="flex justify-between items-center mb-8"
@@ -14,9 +13,12 @@ import { products } from '../../data/products';
         Популярное
       </h2>
 
-      <button>
-        Смотреть все →
-      </button>
+        <RouterLink
+          to="/menu"
+          class="text-lg hover:text-[#A67C52] transition-colors"
+        >
+          Смотреть все →
+        </RouterLink>
     </div>
 
     <div class="grid grid-cols-5 gap-4 mb-10">
@@ -26,25 +28,6 @@ import { products } from '../../data/products';
         :key="product.id"
         :product="product"
       />  
-
-    </div>
-
-    <div class="grid grid-cols-3 gap-6">
-
-      <ServiceCard
-        title="Бонусы"
-        description="Копи поинты и получай награды"
-      />
-
-      <ServiceCard
-        title="Мини-игры"
-        description="Играй и получай бонусы"
-      />
-
-      <ServiceCard
-        title="Мерч"
-        description="Стиль и уют каждый день"
-      />
 
     </div>
 

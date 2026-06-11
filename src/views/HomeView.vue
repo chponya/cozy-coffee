@@ -1,10 +1,11 @@
 <template> 
-    <div>
+    <div class="bg-[#FDF7F2]">
         <Navbar />
 
         <HeroSection />
         <FeaturesSection />
         <PopularProducts />
+        <ServicesSection />
         
         <Footer />
     </div>
@@ -17,6 +18,7 @@
     import HeroSection from '../components/home/HeroSection.vue'
     import FeaturesSection from '../components/home/FeaturesSection.vue'
     import PopularProducts from '../components/home/PopularProducts.vue'
+    import ServicesSection from '../components/home/ServicesSection.vue'
 </script>
 
 
